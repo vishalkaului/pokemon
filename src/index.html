@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pokemon">
 <head>
 	<meta charset="UTF-8">
 	<title>Pokemon Application</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.3/ui-grid.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.0.3/ui-grid.js"></script>
+	<script src="app.js"></script>
 </head>
 <body>
-	<div>
-		<span>
-			<strong>Pokemon using Angular JS >></strong>
-		</span>
+	<div ng-controller="pokemonController as pokemonCtrl">
+		{{pokemonCtrl.test}}
+		<div ui-grid="pokemonCtrl.gridOptions" style="height: 1000px;"></div>
 	</div>
+
+	<script type="text/ng-template" id="image">
+		<img src="images/img/{{row.entity.id}}{{row.entity.ename}}.png" class="img-responsive">
+		<div>{{row.entity.id}}{{row.entity.ename}}.png</div>
+	</script>
 </body>
 </html>
