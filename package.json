@@ -1,0 +1,34 @@
+{
+	"name": "pokemon",
+	"version": "1.0.0",
+	"description": "Pokemon Project with Angular",
+	"main": "index.html",
+	"scripts": {
+		"test": "test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vishalkaului/pokemon.git"
+	},
+	"keywords": [
+		"pokemon",
+		"angularjs",
+		"angular"
+	],
+	"author": "Vishal Kaul",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/vishalkaului/pokemon/issues"
+	},
+	"homepage": "https://github.com/vishalkaului/pokemon#readme",
+	"dependencies": {
+		"angular": "^1.6.3",
+		"bootstrap": "^3.3.7"
+	},
+	"devDependencies": {
+		"grunt": "1.0.1",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-contrib-connect": "^1.0.0"
+	}
+}
