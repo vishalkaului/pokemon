@@ -3,10 +3,23 @@
   white-space: normal !important; }
 
 .ui-grid-row, .ui-grid-cell {
-  height: auto !important; }
+  height: auto !important;
+  text-align: center; }
 
 .ui-grid-row div[role=row] {
   display: flex;
   align-content: stretch; }
+
+.details img {
+  width: 15%;
+  display: inline-block; }
+.details h6 {
+  display: inline; }
+
+.main-pokemon-img {
+  width: 50%;
+  height: 50%;
+  display: inline !important;
+  margin-bottom: 15px; }
 
 /*# sourceMappingURL=style.css.map */
