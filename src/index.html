@@ -12,18 +12,21 @@
 </head>
 <body>
 	<div ng-controller="pokemonController as pokemonCtrl">
-		<!-- <input ng-model="pokemonCtrl.searchText" ng-change="pokemonCtrl.refresh()" placeholder="Search..."> -->
+		<!-- Main Grid container comes here -->
 		<div ui-grid="pokemonCtrl.gridOptions" style="height: 1000px;"></div>
 	</div>
-
+	
+	<!-- Template for the third column-->
 	<script type="text/ng-template" id="image">
 		<img src="images/img/{{row.entity.id}}{{row.entity.ename}}.png" 
 			class="img-responsive main-pokemon-img"
 			 ng-click="grid.appScope.pokemonCtrl.expand(row.entity)">
-		<div>
+		<!-- Show and Hide Details Control-->
+		<div class="showAndHide">
 			<span ng-click="grid.appScope.pokemonCtrl.expand(row.entity)" ng-if="row.entity.showDetails === false">Show Details</span>
 			<span ng-click="grid.appScope.pokemonCtrl.expand(row.entity)" ng-if="row.entity.showDetails === true">Hide Details</span>
 		</div>
+		<!-- Pokemon Details Comes here-->
 		<div ng-show="row.entity.showDetails" class="details">
 			<div class="name-icon">
 				<h4>{{row.entity.ename}}</h4>
@@ -31,7 +34,7 @@
 				<img src="images/spr/{{row.entity.id}}MS.png" class="img-responsive">
 			</div>
 			<div class="types">
-				Types: <br />
+				<h6>Types:</h6>
 				<span ng-repeat="type in row.entity.type">{{type}}</span>
 			</div>
 			<div class="misc">
